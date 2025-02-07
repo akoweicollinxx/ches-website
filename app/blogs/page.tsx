@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 
 type BlogPost = {
   slug: string;
@@ -38,11 +39,14 @@ export default async function BlogsPage() {
             key={slug}
             className="bg-white shadow-lg rounded-lg overflow-hidden"
           >
-            <img
-              src={frontmatter.image}
-              alt={frontmatter.title}
-              className="w-full h-48 object-cover"
-            />
+            <Image
+  src={frontmatter.image}
+  alt={frontmatter.title}
+  width={800} // You must provide width & height
+  height={400}
+  className="w-full h-48 object-cover"
+/>
+
             <div className="p-6">
               <h2 className="text-lg font-bold text-gray-900 mb-2">
                 {frontmatter.title}
