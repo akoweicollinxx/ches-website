@@ -27,7 +27,7 @@ export default function Testimonials() {
               viewport={{ once: true }}
               className="p-6 bg-white shadow-lg rounded-xl border border-gray-200 flex flex-col items-center text-center min-h-[200px]"
             >
-              <p className="text-lg italic text-gray-800">"{testimonial.feedback}"</p>
+              <p className="text-lg italic text-gray-800">{testimonial.feedback}</p>
               <h3 className="text-xl font-semibold text-blue-900 mt-4">{testimonial.name}</h3>
             </motion.div>
           ))}
